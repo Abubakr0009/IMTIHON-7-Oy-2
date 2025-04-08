@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Register from "./page/Register";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,Navigate } from "react-router-dom";
 import Login from "./page/Login";
 import ProtectedRoute from "./router/ProtectedRoute";
 import Home from "./page/Home";
@@ -17,9 +17,11 @@ function App() {
     <>
       <div>
         <Routes>
+          <Route path="/" element={<Navigate to="/register" />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route element={<ProtectedRoute />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/developers" element={<Developers />} />
             <Route path="/createProfile" element={<CreateProfile />} />
             <Route path="/teachers" element={<Teachers />} />
@@ -27,7 +29,6 @@ function App() {
             <Route path="/posts" element={<Posts />} />
             <Route path="/profileDetail/:id" element={<ProfileDetail />} />
           </Route>
-          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </>

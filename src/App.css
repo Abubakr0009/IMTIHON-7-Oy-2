@@ -26,5 +26,5 @@
   padding: 8px 16px;
 }
 .small-row {
-  @apply text-sm py-2; /* Kichik yozuv va yuqori-pastki bo'shliqni kamaytirish */
+  @apply text-sm py-2; 
 }

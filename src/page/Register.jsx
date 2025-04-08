@@ -9,7 +9,7 @@ const Register = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
-    surname: "",  // Familiya maydoni qo'shildi
+    surname: "",  
     email: "",
     password: "",
   });
@@ -19,7 +19,7 @@ const Register = () => {
   const handleSubmit = async (values) => {
     const body = {
       name: values.name.trim(),
-      surname: values.surname.trim(),  // Familiya maydoni qo'shildi
+      surname: values.surname.trim(),  
       email: values.email.trim(),
       password: values.password.trim(),
     };
